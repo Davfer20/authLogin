@@ -1,0 +1,42 @@
+[
+  {
+    "user": "admin",
+    "password": "admin"
+  },
+  {
+    "user": "admin",
+    "password": "1234"
+  },
+  {
+    "username": "testuser",
+    "password": "$2b$10$Gnu2SgS9J9GMmrbBO0OlReOHb1cS52Hox5fXc3jEk3ly0ah0nInqy"
+  },
+  {
+    "username": "prueba",
+    "password": "$2b$10$Ohz.vN7Z1EcN8RPPM425r.gNKft4pPz37D98FRzmjBIIeS4fD7g.O"
+  },
+  {
+    "username": "pruebaa",
+    "password": "$2b$10$v.RqgLD5q7aGca12e/dKUOUAsa557hpGkcCxgYoumrQNnWjHrNE6G"
+  },
+  {
+    "username": "pruebaprueba",
+    "password": "$2b$10$xGdrgpEAGoWNi.4oMmSjfenlCfPHAhu/6eNWnwEdHRw5/sbrmEFdS"
+  },
+  {
+    "username": "deivid",
+    "password": "$2b$10$p9/qb9WW8oy95iexa..AJOl/t4iCM44GS8rDuA1wJsEyytNW6wD3O"
+  },
+  {
+    "username": "1222",
+    "password": "$2a$10$Xsmicey6K7FBn9RTVE0aeeqnZmqCDy4a1/m3mgvubOiD8RUIfr9Jq"
+  },
+  {
+    "username": "aaaaa",
+    "password": "$2a$10$0AdEUTxJu5nQUZEz9PCsEeTqQ2AXeb7H8jkF6Cq/bFAOhjXNfVviS"
+  },
+  {
+    "username": "aaaaaaaaaaaaaa",
+    "password": "$2a$10$lVyGdfMRM9iC1oDsNmb1QucMX4fefQ/PybJuDEHreUkf4mgoMPj9G"
+  }
+]
