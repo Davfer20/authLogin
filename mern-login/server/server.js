@@ -38,19 +38,26 @@ const isUserExists = (username) => {
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
-  // Llamar a la función para validar si el usuario ya existe
-  if (isUserExists(username)) {
-    return res.status(400).json({ message: 'Username already exists' });
+  // Leer la lista de usuarios
+  const users = readUsersFromFile();
+
+  // Buscar al usuario por nombre de usuario
+  const user = users.find(user => user.username === username);
+
+  // Si no se encuentra el usuario, devolver un error
+  if (!user) {
+    return res.status(400).json({ message: 'User does not exist' });
   }
 
-  const hashedPassword = await bcrypt.hash(password, 10);
-  const newUser = { username, password: hashedPassword };
+  // Comparar la contraseña proporcionada con la contraseña almacenada
+  const isPasswordValid = await bcrypt.compare(password, user.password);
 
-  const users = readUsersFromFile();
-  users.push(newUser);
-  writeUsersToFile(users);
+  if (!isPasswordValid) {
+    return res.status(400).json({ message: 'Invalid password' });
+  }
 
-  res.json({ message: 'User registered successfully' });
+  // Si la contraseña es válida, se puede proceder con el login
+  res.json({ message: 'Login successful' });
 });
 
 app.get('/users', (req, res) => {
@@ -59,6 +66,6 @@ app.get('/users', (req, res) => {
 });
 
 
-app.listen(3000, () => {
-  console.log('Server running on port 3000');
+app.listen(4000, () => {
+  console.log('Server running on port 4000');
 });
